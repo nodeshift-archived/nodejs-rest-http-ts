@@ -18,19 +18,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci    
     - run: npm test
-    - run: node_modules/nyc/bin/nyc.js report --reporter=lcovonly
-    - name: Coveralls Parallel
+    - name: upload coverage to Coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.github_token }}
         flag-name: run-${{ matrix.node-version }}
-        parallel: true
-  finish:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Coveralls Finished
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.github_token }}
-        parallel-finished: true
