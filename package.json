@@ -10,16 +10,10 @@
     "pretest": "eslint --ignore-path .gitignore .",
     "test": "TS_NODE_FILES=true nyc --reporter=lcov mocha -r ts-node/register test/*.ts",
     "prepare": "echo 'To confirm CVE compliance, run \"npm audit\"' ",
-    "release": "standard-version -a",
     "openshift": "npm run dev-build && nodeshift --dockerImage=registry.access.redhat.com/ubi8/nodejs-14",
     "start": "node dist/bin/www"
   },
   "main": "dist/bin/www",
-  "standard-version": {
-    "scripts": {
-      "postbump": "npm run postinstall && ts-node release.ts"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/nodeshift-starters/nodejs-rest-http-ts.git"
@@ -38,8 +32,8 @@
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.9.2",
-    "@types/pino": "^6.3.11",
+    "@types/node": "^16.11.9",
+    "@types/pino": "^7.0.5",
     "@types/shelljs": "^0.8.9",
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
@@ -51,17 +45,15 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "js-yaml": "^4.1.0",
-    "mocha": "^9.0.3",
+    "mocha": "^9.1.3",
     "nodeshift": "~8.5.0",
     "nyc": "~15.1.0",
     "shelljs": "^0.8.4",
-    "standard-version": "^9.3.1",
     "supertest": "~6.1.4",
-    "ts-node": "^10.1.0",
-    "typescript": "^4.4.3"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   },
   "dependencies": {
-    "body-parser": "~1.19.0",
     "debug": "^4.3.2",
     "express": "~4.17.1",
     "pino": "^6.13.3",
