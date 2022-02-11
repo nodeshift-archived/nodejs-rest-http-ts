@@ -56,7 +56,7 @@
   "dependencies": {
     "debug": "^4.3.3",
     "express": "~4.17.2",
-    "pino": "^7.6.3",
+    "pino": "^7.6.4",
     "pino-pretty": "^5.1.2"
   }
 }
