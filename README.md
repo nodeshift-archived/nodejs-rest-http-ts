@@ -1,4 +1,7 @@
- ![Node.js CI](https://github.com/nodeshift-starters/nodejs-rest-http-ts/workflows/ci/badge.svg)
+# :warning: **This repo is Archived**.
+
+
+![Node.js CI](https://github.com/nodeshift-starters/nodejs-rest-http-ts/workflows/ci/badge.svg)
  [![Coverage Status](https://coveralls.io/repos/github/nodeshift-starters/nodejs-rest-http-ts/badge.svg?branch=main)](https://coveralls.io/github/nodeshift-starters/nodejs-rest-http-ts?branch=main)
 
 ## Running The Example
